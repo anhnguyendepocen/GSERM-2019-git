@@ -1,8 +1,14 @@
 # GSERM Oslo 2018 - Exercise One (Marinov 2005)
 
-setwd("~/Dropbox (Personal)/GSERM/Materials - Oslo 2018/GSERM-Oslo-2018-git/Exercises")
+setwd("~/Dropbox (Personal)/GSERM/Materials-2018/GSERM-Oslo-2018-git/Exercises")
 
 df <- read.csv("GSERM-Oslo-2018-ExOne.csv")
+
+library(RCurl)
+NMURL<-"https://raw.githubusercontent.com/PrisonRodeo/GSERM-2019-git/master/Exercises/GSERM-StGallen-2019-ExOne.csv"
+temp<-getURL(NMURL)
+df<-read.csv(textConnection(temp))
+rm(temp)
 
 summary(df)
 
