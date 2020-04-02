@@ -36,3 +36,6 @@ fitGEE <- geeglm(fail~sanctionsl1+forcel1+growthpc+lngdppc+democl1+
 summary(fitGEE)
 
 
+set.seed(7222009)
+Xdata <- runif(100,0,100)
+Ydata <- runif(100,0,100)
